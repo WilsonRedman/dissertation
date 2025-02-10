@@ -30,7 +30,13 @@ def collect_data():
         
         else:
             tickers.remove(symbol)
+
     chosenSet = []
+    ############################################################
+    # ADD RANDOMNESS TO TIME, CURRENTLY JUST LOOKING AT END??? #
+    ############################################################
+    # NEVERMIND, THIS IS FOR THE RECENT DATA #
+    ##########################################
     for stock in data:
         recordedDays = len(stock)
         if (recordedDays > INPUT_DAYS):
@@ -53,6 +59,9 @@ def collect_data():
     ###### Altering Input Relating To Start Close ######         
 
     # Turning into list of inputs
+    ###############################################
+    # Unsure if the tickers here will be correct #
+    ##############################################
     dataSet = []
     for i, stock in enumerate(chosenSet):
         stockTemp = []
